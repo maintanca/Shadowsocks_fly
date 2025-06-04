@@ -1,0 +1,25 @@
+app = "shadowsocks-app"
+
+[build]
+
+  dockerfile = "Dockerfile"
+
+[env]
+
+  PASSWORD = "shadoe6yus"
+
+  METHOD = "aes-256-gcm"
+
+  PORT = "8388"
+
+[[services]]
+
+  internal_port = 8388
+
+  protocol = "tcp"
+
+  [[services.ports]]
+
+    handlers = ["tls"]
+
+    port = 443
